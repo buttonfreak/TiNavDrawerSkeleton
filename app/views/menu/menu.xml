@@ -1,0 +1,6 @@
+<Alloy>
+    <TableView class="menuTable" onClick="onSelect">
+    	<Require src="menu/menuRow" title="L('menu_menu1','Main')" controller="main"/>
+        <Require src="menu/menuRow" title="L('menu_menu1','Menu 1')" controller="menu1"/>
+    </TableView>
+</Alloy>

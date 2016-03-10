@@ -1,0 +1,13 @@
+"#drawer": {
+    openDrawerGestureMode: "OPEN_MODE_ALL",
+    closeDrawerGestureMode: "CLOSE_MODE_MARGIN",
+    leftDrawerWidth: 200,
+    rightDrawerWidth: 200,
+    fading: 0.2, // 0-1
+    parallaxAmount: 0.2, //0-1
+    shadowWidth:"400dp",     
+    fullscreen: false,
+    animationMode: 'ANIMATION_SLIDEUP',
+    // use DrawerLayout for Android
+    drawerLayout: true
+}

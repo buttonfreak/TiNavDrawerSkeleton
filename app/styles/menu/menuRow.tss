@@ -1,0 +1,7 @@
+"TableViewRow" : {
+  left: 20,
+  color: '#ffffff',
+  font: {
+    fontSize: 24
+  }
+}

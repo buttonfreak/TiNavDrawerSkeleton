@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="container">
+		<Label onClick="test" class="t-50">Click ME</Label>
+	</View>
+</Alloy>

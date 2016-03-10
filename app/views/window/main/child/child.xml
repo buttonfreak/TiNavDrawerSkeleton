@@ -1,0 +1,8 @@
+<Alloy>
+		<Window id="teamWindow" title="Child window">
+			<View class="container">
+				<Label >3rd level</Label>
+			</View>
+		</Window>
+
+</Alloy>

@@ -1,0 +1,7 @@
+".menuTable" : {
+	backgroundColor : "#312f2f"
+}
+
+".menuTable[platform=ios]" : {
+	top:'20dp'
+}

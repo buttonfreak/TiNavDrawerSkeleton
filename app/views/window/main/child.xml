@@ -1,0 +1,9 @@
+<Alloy>
+	<NavigationWindow id="navigation" module="xp.ui">
+		<Window id="window"  title="Child window">
+			<View class="container" class="t-20">
+				<Label onClick="openAnotherWindow">openAnotherWindow</Label>
+			</View>
+		</Window>
+	</NavigationWindow>
+</Alloy>

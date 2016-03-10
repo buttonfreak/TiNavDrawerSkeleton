@@ -1,0 +1,24 @@
+<Alloy>
+    <Widget id="drawer" src="nl.fokkezb.drawer">
+
+        <Window module="xp.ui" id="leftWindow" role="leftWindow"></Window>
+
+        <NavigationWindow platform="ios" role="centerWindow">
+            <Window id="centerWindow" >
+                <LeftNavButton>
+                    <Button onClick="toggle">Menu</Button>
+                </LeftNavButton>
+            </Window>
+        </NavigationWindow>
+
+        <Window module="xp.ui" id="centerWindow" platform="android" role="centerWindow">
+
+        </Window>
+    
+        <!-- If you are NOT using this window, LEAVE IT HERE (for android) , otherwise the app will crash.. nl.fokkezb.drawer assumes a window with this role is in place -->
+        <Window module="xp.ui" platform="android" role="rightWindow">
+
+        </Window>
+
+    </Widget>
+</Alloy>

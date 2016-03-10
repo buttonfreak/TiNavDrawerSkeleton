@@ -1,0 +1,3 @@
+<Alloy>
+    <Button id="backButton" onClick="closeWindow" >Left</Button>
+</Alloy>
