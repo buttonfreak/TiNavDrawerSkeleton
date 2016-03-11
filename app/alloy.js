@@ -23,8 +23,10 @@ Alloy.Globals.openWindow = function(controller){
 	var win = controller.getView();
 
 	if (!Alloy.Globals.navigationWindow){
-		Ti.API.info("No navigation window active, previous window: ", Alloy.Globals.navigationWindows[0]);
 		// there's no navigationWindow (hence; it's a main window), just open it and try to get an instance of the navigationWindow
+		Ti.API.info("No navigation window active, previous window: ", Alloy.Globals.navigationWindows[0]);
+		
+		// get navigation window from controller and keep it in memory
 		Alloy.Globals.navigationWindow = controller.getNavigationWindow();
 		// if iOS make sure the window has a close button;
 		if (OS_IOS){
@@ -52,13 +54,4 @@ Alloy.Globals.openWindow = function(controller){
 		Alloy.Globals.navigationWindows.push(win);
 		Alloy.Globals.navigationWindow.openWindow(win, {swipeBack:false});	
 	}
-}
-
-
-function doOpen(e, windowObject){
-	// we set the library only when the activity is available
-	// actionBarHelper=require('com.alcoapps.actionbarhelper')($.teamWindow);
-	// actionBarHelper.reloadMenu(); // this forces the actionbar to show menu options from XML
-	// actionBarHelper.setTitle('I dare you to change me');
-
 }
