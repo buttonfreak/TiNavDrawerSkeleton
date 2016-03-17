@@ -1,18 +1,19 @@
-Welcome to your Appcelerator Titanium Mobile Project
+ --- Work In Progress ! ---
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+This project can be used as starting point for you own Titanium app. It's basically a setup for a drawer-based app in which each menu item opens a view (not a window). You can however use (ios-style) navigationwindows. This allows for a natural and consistent UI on both Android and iOS.
+
+Project structure:
+- The drawer-view itself is created from the index-controller. There's a global variable in Alloy.Globals which can be used to force a login-screen before the drawer is started (Alloy.Globals.loginRequired). You need to implement a login-screen and methods yourself.
+- The menu in the drawer can be found in view views/menu/menu.xml .. Each row is based on views/menu/menuRow.xml (which is required from menu.xml). The controller that should be openen from each menurow is defined in the require-tag in menu.xml ( <Require src="menu/menuRow" title="L('menu_menu1','Menu 1')" controller="menu1"/> )
+- main-windows (controllers called from the menu) are found in the root of views/window. Please note that these are NOT view with a window but with a regular view. The controller of these views all inherit the abstract-window. If you create new main-windows you should inherit the abstract as well; it cleans up the view when destroyed and has some methods needed for the navigationwindows
+- Navigation windows are found in subfolders from views/window. Be sure the FIRST window is navigationWindow, the windows after this should be ordinary windows.
+
+The flow;
+Menu-onclick -> open <View> 
+	-> item onClick (tablerow, label whatever) -> open <NavigationWindow> 
+		-> item onClick (tableRow, label whatever) -> open <Window>
 
 
+Note on opening NavigationWindows and Windows; you should use Alloy.Global.openWindow to actually open the window-views. This method will check whether a NavigationWindow or normal Window is to be opened and keeps track of the windows-stack (and closes them when needed).
 
-----------------------------------
-Stuff our legal folk make us say:
-
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
-
-Titanium is Copyright (c) 2008-2013 by Appcelerator, Inc. All Rights Reserved.
-
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
-
+Questions? => ivo@072.nl
